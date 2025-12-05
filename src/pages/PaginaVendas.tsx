@@ -5,8 +5,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Book, Target, Sparkles, MessageCircle, Calendar, Baby, Users, Brain, CheckCircle, Gift, Star, ArrowRight, Heart, Clock, Home } from "lucide-react";
-import heroBible from "@/assets/hero-bible.jpg";
+import { Book, Target, Sparkles, MessageCircle, Calendar, Baby, Users, Brain, CheckCircle, Gift, Star, ArrowRight, Heart, Clock, Home, Timer, Flame, ShieldCheck } from "lucide-react";
+import heroMockup from "@/assets/hero-mockup.png";
 import metodo3p from "@/assets/metodo-3p.jpg";
 import christmasBible from "@/assets/christmas-bible.jpg";
 import testimonial1 from "@/assets/testimonial-1.jpg";
@@ -18,17 +18,25 @@ const CHECKOUT_URL = "https://pay.cakto.com.br/37gygkk_677322";
 const PaginaVendas = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      {/* Scarcity Bar */}
+      <div className="w-full py-3 px-4 gradient-gold text-center animate-slide-down">
+        <p className="text-sm md:text-base font-bold text-background flex items-center justify-center gap-2 flex-wrap">
+          <Timer className="w-4 h-4" />
+          <span>⏳ Oferta Especial de Natal: acesso com bônus exclusivo "7 Dias de Esperança" disponível somente até 31/12.</span>
+        </p>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center gradient-hero pattern-dots">
+      <section className="relative min-h-[90vh] flex items-center justify-center gradient-hero pattern-dots">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
-        <div className="container relative z-10 py-20 md:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container relative z-10 py-16 md:py-24">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 animate-glow-pulse">
                 <Gift className="w-5 h-5 text-secondary" />
                 <span className="text-sm font-medium">Inclui: Devocional de Natal – 7 Dias de Esperança 🎄</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
                 Comece 2026 com Deus:{" "}
                 <span className="text-gradient-gold">O Método que transforma</span> seu estudo bíblico
               </h1>
@@ -42,15 +50,81 @@ const PaginaVendas = () => {
                 </Button>
               </a>
             </div>
-            <div className="relative animate-fade-up-delay-2">
-              <div className="relative rounded-3xl overflow-hidden glow-gold">
+            <div className="relative animate-fade-up-delay-2 flex justify-center lg:justify-end">
+              <div className="relative max-w-[320px] md:max-w-[380px] lg:max-w-[420px]">
                 <img 
-                  src={heroBible} 
-                  alt="Pessoa estudando a Bíblia no app" 
-                  className="w-full h-auto rounded-3xl"
+                  src={heroMockup} 
+                  alt="App Guia da Palavra no celular" 
+                  className="w-full h-auto drop-shadow-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Urgency Section */}
+      <section className="py-16 md:py-20 relative">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
+              Por que <span className="text-gradient-gold">agora</span> é o melhor momento para entrar?
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                icon: Clock,
+                emoji: "🕒",
+                title: "Tempo Limitado",
+                text: "O devocional especial de Natal só estará disponível até 31/12."
+              },
+              {
+                icon: Gift,
+                emoji: "🎁",
+                title: "Bônus Exclusivo",
+                text: "Somente agora inclui o devocional 7 Dias de Esperança."
+              },
+              {
+                icon: Flame,
+                emoji: "🔥",
+                title: "Acesso Vitalício",
+                text: "Pague uma vez e use o método para sempre — sem mensalidade."
+              }
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300 animate-fade-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-16 h-16 rounded-2xl bg-secondary/20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">{item.emoji}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          
+          {/* Reinforced CTA Block */}
+          <div className="mt-12 text-center glass-card p-8 rounded-3xl max-w-2xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-extrabold mb-6">
+              Garanta seu acesso <span className="text-gradient-gold">antes que o bônus acabe</span>
+            </h3>
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="ctaLarge" className="mb-4">
+                Quero garantir agora
+                <ArrowRight className="w-6 h-6" />
+              </Button>
+            </a>
+            <div className="flex items-center justify-center gap-4 flex-wrap text-sm text-muted-foreground">
+              <span className="flex items-center gap-1">
+                <ShieldCheck className="w-4 h-4 text-secondary" /> Pagamento seguro
+              </span>
+              <span>•</span>
+              <span>Acesso imediato</span>
+              <span>•</span>
+              <span>Funciona em qualquer celular</span>
             </div>
           </div>
         </div>
