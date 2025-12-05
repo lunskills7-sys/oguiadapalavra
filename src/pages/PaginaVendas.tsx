@@ -84,6 +84,14 @@ const PaginaVendas = () => {
               </div>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="xl">
+                Quero Resolver Isso Agora
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -133,6 +141,14 @@ const PaginaVendas = () => {
                 <p className="text-muted-foreground">{item.text}</p>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="xl">
+                Sim, Isso é Pra Mim!
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -187,6 +203,14 @@ const PaginaVendas = () => {
               ))}
             </div>
           </div>
+          <div className="text-center mt-12">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="xl">
+                Quero Esse Método
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -227,6 +251,14 @@ const PaginaVendas = () => {
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="xl">
+                Quero Tudo Isso por R$ 29,90
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -270,6 +302,14 @@ const PaginaVendas = () => {
                 />
               </div>
             </div>
+          </div>
+          <div className="text-center mt-12">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="xl">
+                Garantir Meu Bônus de Natal
+                <Gift className="w-5 h-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -367,6 +407,14 @@ const PaginaVendas = () => {
                 <p className="text-muted-foreground">{testimonial.text}</p>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="xl">
+                Quero Ter Essa Transformação
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
