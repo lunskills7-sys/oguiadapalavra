@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Book, Target, Sparkles, MessageCircle, Calendar, Baby, Users, Brain, CheckCircle, Gift, Star, ArrowRight } from "lucide-react";
+import { Book, Target, Sparkles, MessageCircle, Calendar, Baby, Users, Brain, CheckCircle, Gift, Star, ArrowRight, Heart, Clock, Home } from "lucide-react";
 import heroBible from "@/assets/hero-bible.jpg";
 import metodo3p from "@/assets/metodo-3p.jpg";
 import christmasBible from "@/assets/christmas-bible.jpg";
@@ -87,8 +87,58 @@ const PaginaVendas = () => {
         </div>
       </section>
 
-      {/* Method 3P Section */}
+      {/* Para quem é Section */}
       <section className="py-20 md:py-32 relative gradient-hero">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6">
+              Para quem é o{" "}
+              <span className="text-gradient-gold">Guia da Palavra?</span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              O Guia da Palavra foi pensado para cristãos que querem ter mais constância com a Bíblia, 
+              entender o que estão lendo e conseguir aplicar a Palavra no dia a dia.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { 
+                icon: Calendar, 
+                text: "Para quem começa planos de leitura e desiste na terceira semana." 
+              },
+              { 
+                icon: Book, 
+                text: "Para quem lê um versículo, mas sente que não entendeu de verdade o contexto." 
+              },
+              { 
+                icon: MessageCircle, 
+                text: "Para quem quer preparar mensagens, devocionais ou células, mas trava na hora de montar o esboço." 
+              },
+              { 
+                icon: Clock, 
+                text: "Para quem sente que a rotina está corrida, mas não quer deixar a vida com Deus para depois." 
+              },
+              { 
+                icon: Home, 
+                text: "Para pais e mães que querem ensinar a Bíblia para os filhos de forma simples." 
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 rounded-2xl flex items-start gap-4 hover:scale-105 transition-transform duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-secondary" />
+                </div>
+                <p className="text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Method 3P Section */}
+      <section className="py-20 md:py-32 relative">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
