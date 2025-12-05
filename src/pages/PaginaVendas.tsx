@@ -13,7 +13,7 @@ import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
 
-const CHECKOUT_URL = "https://pay.cakto.com.br/37gygkk_677322";
+const CHECKOUT_URL = "https://pay.cakto.com.br/fr2mgut_677614";
 
 const PaginaVendas = () => {
   return (
