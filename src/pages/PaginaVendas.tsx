@@ -32,28 +32,46 @@ const PaginaVendas = () => {
         <div className="container relative z-10 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-up">
-              {/* Emotional Hook */}
-              <p className="text-lg md:text-xl text-muted-foreground mb-3 italic">
-                Você passou mais um ano tentando manter constância com Deus?
-              </p>
-              <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
-                Agora chegou a hora de viver a fé com <span className="text-gradient-gold">clareza, propósito e prática.</span>
+              {/* HEADLINE → Dor + Desejo + Conexão emocional */}
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground mb-4 leading-tight">
+                😔 Mais um ano tentando manter constância com Deus... <span className="text-foreground">e falhando?</span>
+              </h1>
+              <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight mb-8">
+                Chegou a hora de viver a Bíblia com{" "}
+                <span className="text-gradient-gold">clareza, propósito e prática.</span>
               </p>
               
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 animate-glow-pulse">
-                <Gift className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Inclui: Devocional de Natal – 7 Dias de Esperança 🎄</span>
+              {/* SUB-HEADLINE → Proposta + Sazonalidade + Tempo */}
+              <div className="glass-card p-6 rounded-2xl mb-8 max-w-xl mx-auto lg:mx-0">
+                <p className="text-lg md:text-xl font-semibold text-foreground mb-3 flex items-start gap-2">
+                  <span className="text-2xl">📖</span>
+                  <span>Comece 2026 com Deus no centro da sua rotina espiritual com o <span className="text-gradient-gold">Guia da Palavra</span>.</span>
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground flex items-start gap-2">
+                  <Gift className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
+                  <span>Oferta especial com bônus de Natal <strong>"7 Dias de Esperança"</strong> disponível só até 31/12.</span>
+                </p>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
-                Comece 2026 com Deus:{" "}
-                <span className="text-gradient-gold">O Método que transforma</span> seu estudo bíblico
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-                Entenda a Bíblia de forma simples e profunda com o Método 3P + Bônus especial de Natal.
-              </p>
+              
+              {/* Quick Benefits */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 text-sm md:text-base text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  🔓 <span>Acesso imediato</span>
+                </span>
+                <span className="hidden md:inline">•</span>
+                <span className="flex items-center gap-1.5">
+                  📱 <span>Funciona em qualquer celular</span>
+                </span>
+                <span className="hidden md:inline">•</span>
+                <span className="flex items-center gap-1.5">
+                  ✅ <span>Pagamento único e vitalício</span>
+                </span>
+              </div>
+              
+              {/* CTA */}
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
                 <Button variant="ctaLarge" className="animate-fade-up-delay-1">
-                  Quero Acessar Agora
+                  QUERO COMEÇAR AGORA
                   <ArrowRight className="w-6 h-6" />
                 </Button>
               </a>
