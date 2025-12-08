@@ -32,6 +32,14 @@ const PaginaVendas = () => {
         <div className="container relative z-10 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-up">
+              {/* Emotional Hook */}
+              <p className="text-lg md:text-xl text-muted-foreground mb-3 italic">
+                Você passou mais um ano tentando manter constância com Deus?
+              </p>
+              <p className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+                Agora chegou a hora de viver a fé com <span className="text-gradient-gold">clareza, propósito e prática.</span>
+              </p>
+              
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 animate-glow-pulse">
                 <Gift className="w-5 h-5 text-secondary" />
                 <span className="text-sm font-medium">Inclui: Devocional de Natal – 7 Dias de Esperança 🎄</span>
