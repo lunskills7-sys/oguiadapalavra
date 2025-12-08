@@ -33,10 +33,10 @@ const PaginaVendas = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-up">
               {/* HEADLINE → Dor + Desejo + Conexão emocional */}
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground mb-4 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-muted-foreground mb-4 leading-tight">
                 😔 Mais um ano tentando manter constância com Deus... <span className="text-foreground">e falhando?</span>
               </h1>
-              <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight mb-8">
+              <p className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-8">
                 Chegou a hora de viver a Bíblia com{" "}
                 <span className="text-gradient-gold">clareza, propósito e prática.</span>
               </p>
